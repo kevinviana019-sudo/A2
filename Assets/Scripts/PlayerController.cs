@@ -22,13 +22,13 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Checar chão com overLap sphere (CAST)
+        
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
             velocity.y = -2f;
 
-        // Input
+        
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
         controller.Move(move * speed * Time.deltaTime);
 
-        // Pulo
+        
         if (Input.GetButtonDown("Jump") && isGrounded)
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
 

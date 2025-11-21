@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Quando entrar na GameScene, contar automaticamente quantos cristais existem
+        
         if (scene.name == "GameScene")
         {
             Crystal[] all = FindObjectsOfType<Crystal>();
